@@ -10,17 +10,15 @@ public class TestOne {
           String msg = sc.nextLine();
           
           Spam s = new Spam(msg);
-          
-          System.out.println("\n\n------"+s.mensagem);
+
+          s.show();
           s.words();
           
           boolean spam = s.getSpam(); 
         
         if(spam==true){
-            System.out.println(spam);
             System.out.println("Spam");
         }else{
-             System.out.println(spam);
             System.out.println("Verificado não é spam!\nMensagem:\n"+s.mensagem);
         }
        

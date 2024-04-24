@@ -26,18 +26,23 @@ class Spam {
     }
     
     public void show() {
-        for(String showw:searching)
-            System.out.println(showw);
-    }
-    
-    public boolean getSpam(){
         int cont=0;
         for(int j = 0;j<searching.size();j++){
         for(int i = 0;i<wordSpam.size();i++){         
-        if(searching.get(i)==wordSpam.get(i)){
+        if(searching.get(j).equals(wordSpam.get(i))){
             cont++;
         }}}
-        if(cont>=2){
+    }
+    
+    public boolean getSpam(){
+        words();
+        int cont=0;
+        for(int j = 0;j<searching.size();j++){
+        for(int i = 0;i<wordSpam.size();i++){         
+        if(searching.get(j).equals(wordSpam.get(i))){
+            cont++;
+        }}}
+        if(cont>0){
             return true;
         }else{
             return false;
